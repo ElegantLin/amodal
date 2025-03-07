@@ -23,16 +23,19 @@
 </p>
 
 ## Introduction
+<p align="justify">
+We introduce a training-free framework that expands amodal completion capabilities by accepting flexible text queries as input. Our approach generalizes to arbitrary objects specified by both direct terms and abstract queries. We term this capability reasoning amodal completion, where the system <strong>reconstructs the full appearance of the queried object based on the provided image and language query</strong>. Our framework unifies segmentation, occlusion analysis, and inpainting to handle complex occlusions and generates completed objects as RGBA elements, enabling seamless integration into applications such as 3D reconstruction and image editing.
+</p>
 
-![](intro.png)
+
+![](figure/intro.png)
 
 ## Methodology
+<p align="justify">
+Overview of our framework. Starting with a text query, a VLM generates a visible mask to locate the target object in the input image. The framework then identifies all objects and background segments for occlusion analysis. An auto-generated prompt guides the inpainting model, which iteratively reconstructs the occluded object to produce a transparent RGBA amodal completion output.
+</p>
 
-![](methodology.png)
-
-## Model Prediction
-
-![](demo.png)
+![](figure/method.png)
 
 
 ## Getting Started
