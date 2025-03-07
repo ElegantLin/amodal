@@ -38,9 +38,12 @@ Overview of our framework. Starting with a text query, a VLM generates a visible
 ![](figure/method.png)
 
 
-## Getting Started
+## Usage
 
-We will update the code very soon.
+This repository contains the implementation of our pipeline. Please refer to `main.py` for the core implementation. We will update the documentation and remainings soon.
+
+Stay tuned for updates!
+
 
 ### License
 
