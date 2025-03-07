@@ -62,12 +62,10 @@ from ram.models import ram_plus
 from ram import inference_ram as inference
 from ram import get_transform
 
-
 # Global paths for customization
 LISA_SERVER_URL = "http://127.0.0.1:7860/"  # Modify LISA server URL here, use the URL from "Running on local URL..."
 PROJECT_PATH = "/your/path/here/"  # Modify Hugging Face cache path here
 LISA_OUTPUT_PATH = "/your/path/here/LISAoutput/"  # Modify LISA output path here
-
 
 #Hugging Face cache path
 os.environ["HF_DATASETS_CACHE"] = PROJECT_PATH
