@@ -44,6 +44,13 @@ This repository contains the implementation of our pipeline. Please refer to `ma
 
 Stay tuned for updates!
 
+### Download and set up the pre-trained models:
+
+1. ***LISA*** (for mapping natural language queries to visible object regions): Install LISA following the instructions from the [official LISA repository](https://github.com/dvlab-research/LISA). Then, download the checkpoint [LISA-13B-llama2-v1](https://huggingface.co/xinlai/LISA-13B-llama2-v1) from Hugging Face and place it under:`LISA/LISA-13B-llama2-v1/`. Note: We access LISA via API to avoid version conflicts. You can modify the LISA server URL in `main.py` by changing the LISA_SERVER_URL variable.
+
+2. ***InstaOrder*** (for occlusion relationships): Install InstaOrder following the instructions from the [InstaOrder repository](https://github.com/POSTECH-CVLab/InstaOrder), download the checkpoint `InstaOrder_InstaOrderNet_od` and place it under:`InstaOrder/InstaOrder_ckpt/`.
+
+
 
 ### License
 
