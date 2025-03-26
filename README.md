@@ -78,12 +78,15 @@ To run the pipeline, you need to prepare the following input files:
 
 To process images in batches (e.g., 5 images at a time), you can use the provided script `main_batch_example.sh`.
 
+## Dataset 
 
-### License
+Our framework does not require any training. For evaluation, we use a collection of real-world occluded images and corresponding annotations, [download here](https://forms.gle/AQCPVRnzFfB449KfA).
+
+## License
 
 This project is licensed under the Apache License 2.0 - see the [LICENSE](https://github.com/saraao/amodal/blob/main/LICENSE) file for details.
 
-### Acknowledgments
+## Acknowledgments
 
 We thank the following papers for their open-source code, pre-trained models and datasets:
 - Amodal Completion via Progressive Mixed Context Diffusion [[CVPR 2024]](https://github.com/k8xu/amodal)
