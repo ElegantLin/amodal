@@ -1,0 +1,55 @@
+{
+    "annotations": [
+        {
+            "filename": "images_example/activity-8122959_640_spraypaintcan.jpg",
+            "labels": [
+                "spray paint can"
+            ]
+        },
+        {
+            "filename": "images_example/bird-8951872_640_bird.jpg",
+            "labels": [
+                "bird"
+            ]
+        },
+        {
+            "filename": "images_example/camera-8031914_640_camera.jpg",
+            "labels": [
+                "camera"
+            ]
+        },
+        {
+            "filename": "images_example/carlos-lugo-PfIzX6BwnZs-unsplash_icecreamcone.jpg",
+            "labels": [
+                "ice cream cone"
+            ]
+        },
+        {
+            "filename": "images_example/cat-7875506_640_cat.jpg",
+            "labels": [
+                "cat"
+            ]
+        },
+        {
+            "filename": "images_example/coins-1015125_640_calculator.jpg",
+            "labels": [
+                "calculator"
+            ]
+        },        
+        {
+            "filename": "images_example/coins-1015125_640_potato.jpg",
+            "labels": [
+                "potato"
+            ]
+        },
+    ],
+    "statistics": {
+        "total_filenames": 6,
+        "total_labels": 7,
+        "average_labels_per_filename": 1.16666666667,
+        "label_count_distribution": {
+            "1": 5,
+            "2": 1
+        }
+    }
+}
