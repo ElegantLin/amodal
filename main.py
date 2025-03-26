@@ -172,7 +172,7 @@ def load_models(gdino_config, gdino_ckpt, instaorder_ckpt=None, lama_config_path
         instaorder_model.switch_to('eval')
         loaded_models.append(instaorder_model)
 
-    # LaMa
+    # LaMa, we did not use it, but it can be an option for future exploration.
     if lama_config_path is not None and lama_ckpt_path is not None:
         with open(lama_config_path, 'r') as f:
             train_config = OmegaConf.create(yaml.safe_load(f))
