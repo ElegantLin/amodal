@@ -67,7 +67,17 @@ We access LISA via API to avoid dependency conflicts. Run the LISA server locall
 
 ### 3. Prepare Inputs
 
-We will update the documentation and remainings soon. Stay tuned for updates!
+To run the pipeline, you need to prepare the following input files:
+- Input images: Place all image files in a directory (e.g., ./images_example/).
+
+- Image filename list: A text file (e.g., `img_filenames_example.txt`) that contains one image filename per line. For large-scale runs, the pipeline will process the file in batches.
+
+- JSON annotations: A JSON file (e.g., `example_annotation.json`) containing text query for each image.
+
+### 4. Run the Pipeline
+
+To process images in batches (e.g., 5 images at a time), you can use the provided script `main_batch_example.sh`.
+
 
 ### License
 
