@@ -92,7 +92,7 @@ def parse_args():
     parser = argparse.ArgumentParser(description='Run the pipeline')
     parser.add_argument('--input_dir',         type=str,  help="Folder path to images")
     parser.add_argument('--img_filenames_txt', type=str,  default="./img_filenames.txt", help='Text file with image filenames in input_dir that you want to use')
-    parser.add_argument('--json_label_path',   type=str,  default="../amodal/VG_annotation.json")
+    parser.add_argument('--json_label_path',   type=str,  default="../amodal/img_annotation.json")
     parser.add_argument('--output_dir',        type=str,  default="./output")
     
     # Grounding DINO, SAM, InstaOrder
