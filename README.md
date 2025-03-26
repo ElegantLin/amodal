@@ -50,7 +50,9 @@ Stay tuned for updates!
 
 2. ***InstaOrder*** (for occlusion relationships): Install InstaOrder following the instructions from the [InstaOrder repository](https://github.com/POSTECH-CVLab/InstaOrder), download the checkpoint `InstaOrder_InstaOrderNet_od` and place it under:`InstaOrder/InstaOrder_ckpt/`.
 
+3. ***RAM-Grounded-SAM***: Install RAM++ following the instructions from the [official recognize-anything repository](https://github.com/xinyu1205/recognize-anything), download the checkpoint `ram_plus_swin_large_14m`. Install Grounded-SAM following the instructions from the [official Grounded-Segment-Anything repository](https://github.com/IDEA-Research/Grounded-Segment-Anything), download the checkpoint `groundingdino_swint_ogc`.
 
+4. ***Stable Diffusion***: [Stable Diffusion v2 inpainting model](https://huggingface.co/stabilityai/stable-diffusion-2-inpainting).
 
 ### License
 
