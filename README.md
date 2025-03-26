@@ -48,6 +48,8 @@ Stay tuned for updates!
 
 1. ***LISA*** (for mapping natural language queries to visible object regions): Install LISA following the instructions from the [official LISA repository](https://github.com/dvlab-research/LISA). Then, download the checkpoint [LISA-13B-llama2-v1](https://huggingface.co/xinlai/LISA-13B-llama2-v1) from Hugging Face and place it under:`LISA/LISA-13B-llama2-v1/`. Note: We access LISA via API to avoid dependency conflicts. You can modify the LISA server URL in `main.py` by changing the LISA_SERVER_URL variable.
 
+**⚠️ Replace the original LISA/app.py**  with our modified version in this repository. It enables returning raw segmentation masks as NumPy arrays for integration with our pipeline.
+
 2. ***InstaOrder*** (for occlusion relationships): Install InstaOrder following the instructions from the [InstaOrder repository](https://github.com/POSTECH-CVLab/InstaOrder), download the checkpoint `InstaOrder_InstaOrderNet_od` and place it under:`InstaOrder/InstaOrder_ckpt/`.
 
 3. ***RAM-Grounded-SAM***: Install RAM++ following the instructions from the [official recognize-anything repository](https://github.com/xinyu1205/recognize-anything), download the checkpoint `ram_plus_swin_large_14m`. Install Grounded-SAM following the instructions from the [official Grounded-Segment-Anything repository](https://github.com/IDEA-Research/Grounded-Segment-Anything), download the checkpoint `groundingdino_swint_ogc`.
