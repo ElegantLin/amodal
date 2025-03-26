@@ -67,7 +67,7 @@ We access LISA via API to avoid dependency conflicts. Run the LISA server locall
 
 ### 3. Prepare Inputs
 
-TBC
+We will update the documentation and remainings soon. Stay tuned for updates!
 
 ### License
 
