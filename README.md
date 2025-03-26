@@ -38,27 +38,36 @@ Overview of our framework. Starting with a text query, a VLM generates a visible
 ![](figure/method.png)
 
 ## Requirements
+This repository provides the implementation of our Open-World Amodal Appearance Completion pipeline. The core logic resides in `main.py`.
+
+### 1. Set up Environment
 Python: 3.10.14
 
 PyTorch: 1.13.1+cu117
 
-### Download and set up the pre-trained models:
+Install dependencies via:
 
-1. ***LISA*** (for mapping natural language queries to visible object regions): Install LISA following the instructions from the [official LISA repository](https://github.com/dvlab-research/LISA). Then, download the checkpoint [LISA-13B-llama2-v1](https://huggingface.co/xinlai/LISA-13B-llama2-v1) from Hugging Face and place it under:`LISA/LISA-13B-llama2-v1/`. Note: We access LISA via API to avoid dependency conflicts. You can modify the LISA server URL in `main.py` by changing the LISA_SERVER_URL variable.
+```bash
+pip install -r requirements.txt
+```
+### 2. Set up and Download the pre-trained models:
+The pipeline uses several pre-trained models. 
 
-**⚠️ Replace the original LISA/app.py**  with [our modified version](https://github.com/saraao/amodal/blob/main/LISA/app.py) in this repository. This modified version introduces minimal changes to [line 310](https://github.com/saraao/amodal/blob/main/LISA/app.py#L310) and [line 322](https://github.com/saraao/amodal/blob/main/LISA/app.py#L322) to return the raw segmentation mask (pred_mask) for integration with our pipeline.
+1. ***LISA*** (mapping textual queries to visible object regions): Clone and install from [official LISA repository](https://github.com/dvlab-research/LISA). Download the checkpoint [LISA-13B-llama2-v1](https://huggingface.co/xinlai/LISA-13B-llama2-v1) from Hugging Face.
 
-2. ***InstaOrder*** (for occlusion relationships): Install InstaOrder following the instructions from the [InstaOrder repository](https://github.com/POSTECH-CVLab/InstaOrder), download the checkpoint `InstaOrder_InstaOrderNet_od` and place it under:`InstaOrder/InstaOrder_ckpt/`.
+   **⚠️ Replace the original LISA/app.py**  with [our modified version](https://github.com/saraao/amodal/blob/main/LISA/app.py) in this repository. This modified version introduces minimal changes to [line 310](https://github.com/saraao/amodal/blob/main/LISA/app.py#L310) and [line 322](https://github.com/saraao/amodal/blob/main/LISA/app.py#L322) to return the raw segmentation mask (pred_mask) for integration with our pipeline.
 
-3. ***RAM-Grounded-SAM***: Install RAM++ following the instructions from the [official recognize-anything repository](https://github.com/xinyu1205/recognize-anything), download the checkpoint `ram_plus_swin_large_14m`. Install Grounded-SAM following the instructions from the [official Grounded-Segment-Anything repository](https://github.com/IDEA-Research/Grounded-Segment-Anything), download the checkpoint `groundingdino_swint_ogc`.
+We access LISA via API to avoid dependency conflicts. Run the LISA server locally, and update [`LISA_SERVER_URL`](https://github.com/saraao/amodal/blob/main/main.py#L66) in `main.py` accordingly.
 
-4. ***Stable Diffusion***: [Stable Diffusion v2 inpainting model](https://huggingface.co/stabilityai/stable-diffusion-2-inpainting).
+2. ***InstaOrder*** (for occlusion relationships): Clone and install from the [InstaOrder repository](https://github.com/POSTECH-CVLab/InstaOrder), download the checkpoint `InstaOrder_InstaOrderNet_od.pth.tar`.
+
+3. ***RAM-Grounded-SAM***: Install RAM++ following the instructions from the [official recognize-anything repository](https://github.com/xinyu1205/recognize-anything), download the checkpoint `ram_plus_swin_large_14m.pth`. Install Grounded-SAM following the instructions from the [official Grounded-Segment-Anything repository](https://github.com/IDEA-Research/Grounded-Segment-Anything), download the checkpoint `groundingdino_swint_ogc.pth` and `sam_vit_h_4b8939.pth`.
+
+4. ***Stable Diffusion*** (for inpainting): [Stable Diffusion v2 inpainting model](https://huggingface.co/stabilityai/stable-diffusion-2-inpainting).
 
 ## Usage
 
-This repository contains the implementation of our pipeline. Please refer to `main.py` for the core implementation. We will update the documentation and remainings soon.
 
-Stay tuned for updates!
 
 ### License
 
