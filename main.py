@@ -94,12 +94,17 @@ def parse_args():
     parser.add_argument('--img_filenames_txt', type=str,  default="./img_filenames.txt", help='Text file with image filenames in input_dir that you want to use')
     parser.add_argument('--json_label_path',   type=str,  default="../amodal/VG_annotation.json")
     parser.add_argument('--output_dir',        type=str,  default="./output")
+    
+    # Grounding DINO, SAM, InstaOrder
     parser.add_argument('--gdino_config',      type=str,  default="Grounded-Segment-Anything/GroundingDINO/groundingdino/config/GroundingDINO_SwinT_OGC.py")
     parser.add_argument('--gdino_ckpt',        type=str,  default="Grounded-Segment-Anything/groundingdino_swint_ogc.pth")
     parser.add_argument('--sam_ckpt',          type=str,  default="Grounded-Segment-Anything/sam_vit_h_4b8939.pth")
     parser.add_argument('--instaorder_ckpt',   type=str,  default="InstaOrder/InstaOrder_ckpt/InstaOrder_InstaOrderNet_od.pth.tar")
+    
+    # LaMa: configuration and checkpoint paths (not used currently, but kept for future use)
     parser.add_argument('--lama_config_path',  type=str,  default="lama/big-lama/config.yaml")
     parser.add_argument('--lama_ckpt_path',    type=str,  default="lama/big-lama/models/best.ckpt")
+    
     parser.add_argument('--save_interm',       type=bool, default=True, help='Whether to save intermediate images')
     parser.add_argument('--max_iter_id',       type=int,  default=3,    help='Maximum number of pipeline iterations')
     parser.add_argument('--mc_clean_bkgd_img', type=str,  default="images/gray_wallpaper.jpeg", help='Path to clean background image')
