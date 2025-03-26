@@ -37,12 +37,10 @@ Overview of our framework. Starting with a text query, a VLM generates a visible
 
 ![](figure/method.png)
 
+## Requirements
+Python: 3.10.14
 
-## Usage
-
-This repository contains the implementation of our pipeline. Please refer to `main.py` for the core implementation. We will update the documentation and remainings soon.
-
-Stay tuned for updates!
+PyTorch: 1.13.1+cu117
 
 ### Download and set up the pre-trained models:
 
@@ -55,6 +53,12 @@ Stay tuned for updates!
 3. ***RAM-Grounded-SAM***: Install RAM++ following the instructions from the [official recognize-anything repository](https://github.com/xinyu1205/recognize-anything), download the checkpoint `ram_plus_swin_large_14m`. Install Grounded-SAM following the instructions from the [official Grounded-Segment-Anything repository](https://github.com/IDEA-Research/Grounded-Segment-Anything), download the checkpoint `groundingdino_swint_ogc`.
 
 4. ***Stable Diffusion***: [Stable Diffusion v2 inpainting model](https://huggingface.co/stabilityai/stable-diffusion-2-inpainting).
+
+## Usage
+
+This repository contains the implementation of our pipeline. Please refer to `main.py` for the core implementation. We will update the documentation and remainings soon.
+
+Stay tuned for updates!
 
 ### License
 
