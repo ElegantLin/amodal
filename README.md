@@ -37,7 +37,7 @@ Overview of our framework. Starting with a text query, a VLM generates a visible
 
 ![](figure/method.png)
 
-## Requirements
+## Usage
 This repository provides the implementation of our Open-World Amodal Appearance Completion pipeline. The core logic resides in `main.py`.
 
 ### 1. Set up Environment
@@ -65,9 +65,9 @@ We access LISA via API to avoid dependency conflicts. Run the LISA server locall
 
 4. ***Stable Diffusion*** (for inpainting): [Stable Diffusion v2 inpainting model](https://huggingface.co/stabilityai/stable-diffusion-2-inpainting).
 
-## Usage
+### 3. Prepare Inputs
 
-
+TBC
 
 ### License
 
