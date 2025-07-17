@@ -105,11 +105,12 @@ We thank the following papers for their open-source code, pre-trained models and
 
 If you find this helpful in your work, please consider citing our paper:
 ```
-@article{ao2024open,
-  title={Open-World Amodal Appearance Completion},
+@inproceedings{ao2025open,
+  title={Open-world amodal appearance completion},
   author={Ao, Jiayang and Jiang, Yanbei and Ke, Qiuhong and Ehinger, Krista A},
-  journal={arXiv preprint arXiv:2411.13019},
-  year={2024}
+  booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
+  pages={6490--6499},
+  year={2025}
 }
 ```
 
