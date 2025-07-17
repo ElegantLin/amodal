@@ -1012,24 +1012,11 @@ def run_pipeline(args,read_img_filenames, range_len, round_number):
             # Delete intermediate folders
             clean_up_intermediate_results(query_obj.output_img_dir)
         
-
-        # Calculate end time for the current image (excluding the client block time)
-        image_end_time = time.time()
-        # Calculate processing time excluding the client part
-        image_processing_time = (image_end_time - start_time) - exclude_time
-        total_processing_time += image_processing_time  # Accumulate the total time for all images
-        image_count += 1  # Increment image counter
-        print(f"Time for current image (excluding client block): {image_processing_time:.2f} seconds")
-        
         # Free GPU and CPU memory after each image
         del img, masks, class_names, pred_scores, query_obj
         torch.cuda.empty_cache()
         gc.collect()  # Manual garbage collection to free up memory
     
-    # Calculate the average processing time
-    average_time = total_processing_time / image_count if image_count > 0 else 0
-    print(f"Average processing time per image (excluding client block): {average_time:.2f} seconds")
-
 
 def handlemask(img, masks, class_names):
     """
