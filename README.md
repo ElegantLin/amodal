@@ -13,7 +13,7 @@
     <a href="https://arxiv.org/abs/2411.13019" style="text-decoration:none;">
       <img src="https://img.shields.io/badge/arXiv-2411.13019-b31b1b.svg" alt="arXiv Badge">
     </a>
-    <a href="https://cvpr.thecvf.com/Conferences/2025/AcceptedPapers" style="text-decoration:none;">
+    <a href="https://cvpr.thecvf.com/virtual/2025/poster/35148" style="text-decoration:none;">
       <img src="https://img.shields.io/badge/Pub-CVPR'25-blue" alt="CVPR Badge">
     </a>
     <a href="https://opensource.org/license/apache-2-0" style="text-decoration:none;">
